@@ -85,18 +85,14 @@ keyMap['r'] = {'remove', 'remove'}
 
 
 function loadFilenames()
-   maxImgs = 1
+   maxImgs = 510
+   j = 1
    for i = 1, maxImgs do
-      --filenameFloorplan: path to floorplan image
-      --filenameFloorplan: path to annotation txt file
-      print('please change loadFilenames() function to load images')
-
-      filenameFloorplan = '../data/floorplan_1.png'
-      filenameRepresentation = '../data/floorplan_1.txt'
+      filenameFloorplan = '../data/Cat'..j..'_'..(i%10)..'.jpg'
+      filenameRepresentation = '../data/Cat'..j..'_'..(i%10)..'.txt'
       table.insert(filenames, filenameFloorplan)
       table.insert(filenamesRepresentation, filenameRepresentation)
-      break
-
+      j = 1+math.floor(i/10)
    end
 end
 
