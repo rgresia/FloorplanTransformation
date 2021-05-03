@@ -88,8 +88,8 @@ function loadFilenames()
    maxImgs = 510
    j = 1
    for i = 1, maxImgs do
-      filenameFloorplan = '../data/Cat'..j..'_'..(i%10)..'.jpg'
-      filenameRepresentation = '../data/Cat'..j..'_'..(i%10)..'.txt'
+      filenameFloorplan = '../data/Cat'..j..'_'..(i%11)..'.jpg'
+      filenameRepresentation = '../data/Cat'..j..'_'..(i%11)..'.txt'
       table.insert(filenames, filenameFloorplan)
       table.insert(filenamesRepresentation, filenameRepresentation)
       j = 1+math.floor(i/10)
